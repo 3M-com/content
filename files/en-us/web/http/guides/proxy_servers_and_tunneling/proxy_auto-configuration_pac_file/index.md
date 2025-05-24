@@ -348,7 +348,7 @@ shExpMatch(str, shExp)
 #### Parameters
 
 - str
-  - : is any string to compare (e.g. the URL, or the hostname).
+  - : is any string to compare (e.g., the URL, or the hostname).
 - shExp
   - : is a shell expression to compare against.
 
@@ -373,7 +373,8 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 #### Syntax
 
 ```js-nolint
-weekdayRange(wd1, wd2, [gmt])
+weekdayRange(wd1, wd2)
+weekdayRange(wd1, wd2, gmt)
 ```
 
 > [!NOTE]
@@ -412,13 +413,20 @@ weekdayRange("FRI", "MON") // returns true Friday and Monday only (note, the ord
 #### Syntax
 
 ```js-nolint
-dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
-dateRange(<day1>, <day2>, [gmt])
-dateRange(<month1>, <month2>, [gmt])
-dateRange(<year1>, <year2>, [gmt])
-dateRange(<day1>, <month1>, <day2>, <month2>, [gmt])
-dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
-dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
+dateRange(dayOrMonthOrYear)
+dateRange(dayOrMonthOrYear, gmt)  // ambiguity is resolved by assuming year is greater than 31
+dateRange(day1, day2)
+dateRange(day1, day2, gmt)
+dateRange(month1, month2)
+dateRange(month1, month2, gmt)
+dateRange(year1, year2)
+dateRange(year1, year2, gmt)
+dateRange(day1, month1, day2, month2)
+dateRange(day1, month1, day2, month2, gmt)
+dateRange(month1, year1, month2, year2)
+dateRange(month1, year1, month2, year2, gmt)
+dateRange(day1, month1, year1, day2, month2, year2)
+dateRange(day1, month1, year1, day2, month2, year2, gmt)
 ```
 
 > [!NOTE]
@@ -428,18 +436,8 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
-
-```plain
-1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
-```
-
 - month
-  - : Is one of the ordered month strings below.
-
-```plain
-"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
-```
-
+  - : Is one of the ordered month strings: `"JAN"`, `"FEB"`, `"MAR"`, `"APR"`, `"MAY"`, `"JUN"`, `"JUL"`, `"AUG"`, `"SEP"`, `"OCT"`, `"NOV"`, `"DEC"`.
 - year
   - : Is the ordered full year integer number. For example, 2016 (**not** 16).
 - gmt
@@ -482,7 +480,8 @@ dateRange(1995, 1997);
 
 ```js-nolint
 // The full range of expansions is analogous to dateRange.
-timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
+timeRange(hour1, min1, sec1, hour2, min2, sec2)
+timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)
 ```
 
 > [!NOTE]
@@ -549,9 +548,8 @@ All hosts which aren't fully qualified, or the ones that are in local domain, wi
 function FindProxyForURL(url, host) {
   if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
     return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
+  return "PROXY w3proxy.mozilla.org:8080; DIRECT";
 }
 ```
 
@@ -572,9 +570,8 @@ function FindProxyForURL(url, host) {
     !localHostOrDomainIs(host, "merchant.mozilla.org")
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
+  return "PROXY w3proxy.mozilla.org:8080; DIRECT";
 }
 ```
 
@@ -638,9 +635,8 @@ function FindProxyForURL(url, host) {
     isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
   }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -667,9 +663,8 @@ function FindProxyForURL(url, host) {
     return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
   } else if (shExpMatch(host, "*.edu")) {
     return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
-  } else {
-    return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
   }
+  return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
 }
 ```
 

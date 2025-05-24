@@ -92,7 +92,7 @@ const math = {
   },
 };
 
-math.factorial(3); //3;2;1;
+math.factorial(3); // 3;2;1;
 ```
 
 If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property of the function is set to that name, instead of the implicit name inferred from syntax (such as the variable the function is assigned to).
@@ -149,16 +149,14 @@ button.addEventListener("click", function (event) {
   console.log(a + b);
 })(1, 2); // logs 3
 
-
 // IIFE being used to initialize a variable
 const value = (() => {
   const randomValue = Math.random();
   if (randomValue > 0.5) {
     return "heads";
-  } else {
-    return "tails";
   }
-}());
+  return "tails";
+})();
 ```
 
 Here, we introduce several use cases with examples.

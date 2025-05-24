@@ -70,22 +70,22 @@ A {{jsxref("Promise")}} that fulfills with an array of objects, each containing 
 
 ```js
 // Iframe displaying a page from the https://idp.example origin
-const user_info = await IdentityProvider.getUserInfo({
-  configUrl: "https://idp.example/fedcm.json",
+const userInfo = await IdentityProvider.getUserInfo({
+  configURL: "https://idp.example/fedcm.json",
   clientId: "client1234",
 });
 
 // IdentityProvider.getUserInfo() returns an array of user information.
-if (user_info.length > 0) {
+if (userInfo.length > 0) {
   // Returning accounts should be first, so the first account received
   // is guaranteed to be a returning account
-  const name = user_info[0].name;
-  const given_name = user_info[0].given_name;
-  const display_name = given_name ? given_name : name;
-  const picture = user_info[0].picture;
-  const email = user_info[0].email;
+  const name = userInfo[0].name;
+  const givenName = userInfo[0].given_name;
+  const displayName = givenName || name;
+  const picture = userInfo[0].picture;
+  const email = userInfo[0].email;
 
-  // ...
+  // …
 
   // Render the personalized sign-in button using the information above
 }
@@ -101,4 +101,4 @@ if (user_info.length > 0) {
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm) on developers.google.com (2023)
+- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)

@@ -1,5 +1,6 @@
 ---
-title: PATCH
+title: PATCH request method
+short-title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
 page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789
@@ -130,3 +131,4 @@ Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Win
 - {{HTTPStatus("204")}}
 - {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}} headers
 - {{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server
+- [JSON Patch Generator](https://jsoning.com/jsonpatch/)

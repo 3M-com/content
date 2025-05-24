@@ -1,5 +1,6 @@
 ---
-title: Observe-Browsing-Topics
+title: Observe-Browsing-Topics header
+short-title: Observe-Browsing-Topics
 slug: Web/HTTP/Reference/Headers/Observe-Browsing-Topics
 page-type: http-header
 status:
@@ -42,7 +43,7 @@ Observe-Browsing-Topics: ?1
 ### Directives
 
 - `?1`
-  - : A character sequence declaring that topics of interest inferred from a calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded) are marked as observed. The browser will subsequently use those topics to calculate topics of interest for a user for future epochs.
+  - : A character sequence declaring that topics of interest inferred from a calling site's URL (i.e., the site where the ad tech `<iframe>` is embedded) are marked as observed. The browser will subsequently use those topics to calculate topics of interest for a user for future epochs.
 
 ## Specifications
 

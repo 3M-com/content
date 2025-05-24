@@ -1,5 +1,6 @@
 ---
-title: If-Match
+title: If-Match header
+short-title: If-Match
 slug: Web/HTTP/Reference/Headers/If-Match
 page-type: http-header
 browser-compat: http.headers.If-Match
@@ -46,7 +47,7 @@ If-Match: <etag_value>, <etag_value>, …
 - `<etag_value>`
   - : Entity tags uniquely representing the requested resources.
     They are a string of {{Glossary("ASCII")}} characters placed between double quotes (like `"675af34563dc-tr34"`).
-    They may be prefixed by `W/` to indicate that they are 'weak', i.e. that they represent the resource semantically but not byte-by-byte.
+    They may be prefixed by `W/` to indicate that they are 'weak', i.e., that they represent the resource semantically but not byte-by-byte.
     However, in an `If-Match` header, weak entity tags will never match.
 - `*`
   - : The asterisk is a special value representing any resource.
