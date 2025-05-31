@@ -3,9 +3,8 @@ title: Command line crash course
 short-title: Command line
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -72,7 +71,7 @@ And below, you can see the macOS terminal application.
 
 ### How do you access the terminal?
 
-Many developers today are using Unix-based tools (e.g. the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we'll look at how to get access to the terminal on your chosen system.
+Many developers today are using Unix-based tools (e.g., the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we'll look at how to get access to the terminal on your chosen system.
 
 #### Linux/Unix
 
@@ -178,7 +177,7 @@ cd Desktop/project/src
 Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash as we've done above makes the path relative to your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the website", whereas omitting the slash means "the URL is relative to my current page".
 
 > [!NOTE]
-> On windows, you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
+> On windows, you use backslashes instead of forward slashes, e.g., `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
 
 ### Listing directory contents
 
@@ -239,9 +238,10 @@ We've alluded to this before, but to be clear — you need to be careful with th
 Let's say you had 1000 text files in a directory, and you wanted to go through them all and only delete the ones that have a certain substring inside the filename. If you are not careful, then you might end up deleting something important, losing you a load of your work in the process.
 One good habit to get into is to write your terminal command out inside a text editor, figure out how you think it should look, and then make a backup copy of your directory and try running the command on that first, to test it.
 
-Another good tip — if you're not comfortable trying terminal commands out on your own machine, a nice safe place to try them is over at [Glitch.com](https://glitch.com/). Along with being a great place to try out web development code, the projects also give you access to a terminal, so you can run all these commands directly in that terminal, safe in the knowledge that you won't break your own machine.
+If you're not comfortable trying terminal commands out on your own machine, there are hosted online terminals available that provide safe places to practice entering commands, without risking breaking your own machine:
 
-![a double screenshot showing the glitch.com home page, and the glitch terminal emulator](glitch.png)
+- Our learning partner, [Scrimba](https://scrimba.com/home?via=mdn), features a terminal for entering commands in their learning environment. A great place to see this in action is their [Command Line Basics](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> course, which also provides a fun interactive introduction to navigating around the file tree and manipulating files and directories via the terminal.
+- [Glitch.com](https://glitch.com/) is a great place to try out web development code, and Glitch projects also include a terminal for running commands.
 
 A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
 

@@ -74,7 +74,7 @@ Adding the cube to the scene is done by adding a simple [`<a-box>`](https://afra
 ```
 
 It contains a few parameters already defined: `color`, `position` and `rotation` — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.
-The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
+The distance values (e.g., for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
 ### Adding a background: Sky box
 
@@ -301,7 +301,7 @@ Everything is rendered properly and animating — congratulations on building yo
   function render() {
     t += 0.01;
     requestAnimationFrame(render);
-    cylinder.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
+    cylinder.setAttribute("position", `3 ${Math.sin(t * 2) + 1} 0`);
   }
   render();
 </script>

@@ -18,14 +18,14 @@ This article explains how to create a new reference page for an HTTP header.
 
 ## Step 2 – Check the existing HTTP header pages
 
-- Existing HTTP headers are documented [here](/en-US/docs/Web/HTTP/Reference/Headers).
+- Existing HTTP headers are documented [in the HTTP reference](/en-US/docs/Web/HTTP/Reference/Headers).
 - There are different header categories: {{Glossary("Request header")}}, {{Glossary("Response header")}}, and {{Glossary("Representation header")}}.
 - Find the category of the header you are about to document (note that some headers can be both request and response headers, depending on the context).
 - Go to an existing header reference page that has the same category.
 
 ## Step 3 – Create the HTTP header page
 
-- All header pages live under this tree: [`files/en-us/web/http/headers`](https://github.com/mdn/content/tree/main/files/en-us/web/http/headers)
+- All header pages live under this tree: [`files/en-us/web/http/reference/headers`](https://github.com/mdn/content/tree/main/files/en-us/web/http/reference/headers)
 - To create a new page, see the instructions in our [how to create a page](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
 
 ## Step 4 – Write the content

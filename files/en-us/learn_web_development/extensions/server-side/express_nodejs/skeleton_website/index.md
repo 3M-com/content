@@ -3,13 +3,16 @@ title: "Express Tutorial Part 2: Creating a skeleton website"
 short-title: "2: Skeleton website"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 This second article in our [Express Tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) shows how you can create a "skeleton" website project which you can then go on to populate with site-specific routes, templates/views, and database calls.
+
+> [!WARNING]
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation in the second half of 2025.
 
 <table>
   <tbody>
@@ -82,7 +85,7 @@ express
 You can also choose a view (template) engine using `--view` and/or a CSS generation engine using `--css`.
 
 > [!NOTE]
-> The other options for choosing template engines (e.g. `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
+> The other options for choosing template engines (e.g., `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
 
 ### What view engine should I use?
 
@@ -425,7 +428,7 @@ const app = require("../app");
 
 > [!NOTE]
 > Node.js 14 and later support ES6 `import` statements for importing JavaScript (ECMAScript) modules.
-> To use this feature you have to add `"type": "module",` to your Express **package.json** file, all the modules in your application have to use `import` rather than `require()`, and for _relative imports_ you must include the file extension (for more information see the [Node documentation](https://nodejs.org/api/esm.html#introduction)).
+> To use this feature you have to add `"type": "module"` to your Express **package.json** file, all the modules in your application have to use `import` rather than `require()`, and for _relative imports_ you must include the file extension (for more information see the [Node documentation](https://nodejs.org/api/esm.html#introduction)).
 > While there are benefits to using `import`, this tutorial uses `require()` in order to match [the Express documentation](https://expressjs.com/en/starter/hello-world.html).
 
 The remainder of the code in this file sets up a node HTTP server with `app` set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
@@ -436,6 +439,7 @@ This file creates an `express` application object (named `app`, by convention), 
 
 ```js
 const express = require("express");
+
 const app = express();
 // …
 module.exports = app;
@@ -531,6 +535,7 @@ Then it specifies a route on that object and lastly exports the router from the 
 
 ```js
 const express = require("express");
+
 const router = express.Router();
 
 /* GET users listing. */

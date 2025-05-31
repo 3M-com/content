@@ -13,7 +13,7 @@ Choosing the correct color space is important for producing desired results. Giv
 
 - If the result of physically mixing two colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
 - If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab color space (and the older Lab) are appropriate, because they are designed to be perceptually uniform.
-- If avoiding graying out in color mixing is desired, i.e. maximizing chroma throughout the transition, Oklch (and the older LCH) work well.
+- If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, Oklch (and the older LCH) work well.
 - Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
 
 ## Syntax
@@ -79,7 +79,7 @@ The following live demo mixes two colors, `color-one` and `color-two`, using the
 
 ### Mixing two colors
 
-This example demonstrates mixing two colors, blue `#a71e14` at different percentages and white with no percentage given. The higher the percentage of `#a71e14` is mixed, the more blue and less white the output color is.
+This example demonstrates mixing two colors, red `#a71e14` at different percentages and white with no percentage given. The higher the percentage of `#a71e14` is mixed, the more red and less white the output color is.
 
 #### HTML
 
@@ -96,7 +96,7 @@ This example demonstrates mixing two colors, blue `#a71e14` at different percent
 
 #### CSS
 
-The `color-mix()` function is used to add increasing percentages of blue, up to 100%. The 6th {{htmlelement("li")}} doesn't include a percentage for either color.
+The `color-mix()` function is used to add increasing percentages of red, up to 100%. The 6th {{htmlelement("li")}} doesn't include a percentage for either color.
 
 ```css hidden
 ul {
